@@ -4,8 +4,8 @@ import '../helpers/navigation_service.dart';
 
 void customToastMessage(String title, String description) {
   // Get the root scaffold messenger
-  final context =  NavigationService.navigatorKey.currentContext!;
-  
+  final context = NavigationService.navigatorKey.currentContext!;
+
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Column(

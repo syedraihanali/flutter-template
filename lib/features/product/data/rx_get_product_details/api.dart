@@ -12,9 +12,9 @@ final class GetProductDetailsApi {
   Future<Map> getProductDetailsData({required int id}) async {
     try {
       Response response = await getHttp(
-        Endpoints.productDetails(id ),
+        Endpoints.productDetails(id),
       );
-      if (response.statusCode == 200 || response.statusCode == 201 ) {
+      if (response.statusCode == 200 || response.statusCode == 201) {
         Map data = json.decode(json.encode(response.data));
         return data;
       } else {

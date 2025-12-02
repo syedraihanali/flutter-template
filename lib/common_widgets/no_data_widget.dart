@@ -34,7 +34,8 @@ class NoDataWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: verticalPadding.h),
+      padding:
+          EdgeInsets.symmetric(horizontal: 40.w, vertical: verticalPadding.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -58,18 +59,18 @@ class NoDataWidget extends StatelessWidget {
               size: iconSize.sp,
               color: iconColor,
             ),
-          
+
           UIHelper.verticalSpace(24.h),
-          
+
           // Title
           Text(
             title,
             style: TextFontStyle.textStyle18c202020DMSans600,
             textAlign: TextAlign.center,
           ),
-          
+
           UIHelper.verticalSpace(8.h),
-          
+
           // Subtitle
           Text(
             subtitle,
@@ -78,9 +79,9 @@ class NoDataWidget extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          
+
           UIHelper.verticalSpace(24.h),
-          
+
           // Action Button (Optional)
           if (showActionButton)
             SizedBox(
@@ -93,7 +94,8 @@ class NoDataWidget extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.r),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
                 ),
                 child: Text(
                   actionText,
@@ -110,14 +112,15 @@ class NoDataWidget extends StatelessWidget {
 // Specific NoDataWidget variations for common use cases
 class NoProductsWidget extends StatelessWidget {
   final VoidCallback? onRefresh;
-  
+
   const NoProductsWidget({super.key, this.onRefresh});
 
   @override
   Widget build(BuildContext context) {
     return NoDataWidget(
       title: 'No Products Found',
-      subtitle: 'We couldn\'t find any products matching your criteria. Please try again later.',
+      subtitle:
+          'We couldn\'t find any products matching your criteria. Please try again later.',
       icon: Icons.shopping_bag_outlined,
       showActionButton: onRefresh != null,
       actionText: 'Refresh',
@@ -128,7 +131,7 @@ class NoProductsWidget extends StatelessWidget {
 
 class NoInternetWidget extends StatelessWidget {
   final VoidCallback? onRetry;
-  
+
   const NoInternetWidget({super.key, this.onRetry});
 
   @override
@@ -146,14 +149,15 @@ class NoInternetWidget extends StatelessWidget {
 
 class NoFavoritesWidget extends StatelessWidget {
   final VoidCallback? onBrowse;
-  
+
   const NoFavoritesWidget({super.key, this.onBrowse});
 
   @override
   Widget build(BuildContext context) {
     return NoDataWidget(
       title: 'No Favorites Yet',
-      subtitle: 'Start browsing products and add your favorites to see them here.',
+      subtitle:
+          'Start browsing products and add your favorites to see them here.',
       icon: Icons.favorite_border,
       showActionButton: onBrowse != null,
       actionText: 'Browse Products',

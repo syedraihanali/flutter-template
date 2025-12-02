@@ -19,16 +19,15 @@ final class Endpoints {
   static String signUp() => "/auth/register";
   static String logIn() => "/auth/login";
 
-///profile
+  ///profile
   static String profile() => "/user/profile";
-
-
 
   // static String getShopByCategories(String slug) =>
   //     "/api/shop-categories/$slug/";
 
-    static String example() => "/api/";
+  static String example() => "/api/";
 
-  static String products(int pageNum, int perPage) => "/products?page=$pageNum&per_page=$perPage";
+  static String products(int pageNum, int perPage) =>
+      "/products?page=$pageNum&per_page=$perPage";
   static String productDetails(int id) => "/products/$id";
 }

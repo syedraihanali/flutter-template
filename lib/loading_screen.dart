@@ -41,7 +41,7 @@ class _LoadingState extends State<Loading> {
     if (appData.read(kKeyIsLoggedIn)) {
       String token = appData.read(kKeyAccessToken);
       DioSingleton.instance.update(token);
-     await performPostLoginActions();
+      await performPostLoginActions();
     } else {
       //  NotificationService().cancelAllNotifications();
     }

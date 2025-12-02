@@ -29,7 +29,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  
 
   bool _isLoading = false;
 
@@ -57,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (success) {
           //await Future.delayed(const Duration(milliseconds: 500));
           log("Login Successful");
-             
+
           customToastMessage('Success', "You have sucessfully logged in");
           NavigationService.navigateTo(Routes.productsScreen);
         }

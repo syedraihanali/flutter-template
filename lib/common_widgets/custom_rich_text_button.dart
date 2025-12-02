@@ -34,9 +34,8 @@ class CustomRichTextButton extends StatelessWidget {
               style: TextFontStyle.textStyle14c606060DMSans400,
             ),
             TextSpan(
-              text: buttonText,
-              style: TextFontStyle.textStyle14cFF3A1222DMSans600
-            ),
+                text: buttonText,
+                style: TextFontStyle.textStyle14cFF3A1222DMSans600),
           ],
         ),
       ),

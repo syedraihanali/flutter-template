@@ -9,7 +9,8 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.isPassword = false,
     this.prefixIcon,
-    this.textInputAction,  this.keyboardType,
+    this.textInputAction,
+    this.keyboardType,
   });
 
   final TextEditingController controller;
